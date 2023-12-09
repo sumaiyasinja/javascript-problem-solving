@@ -1,0 +1,89 @@
+function cubeNumber(number) {
+  if (typeof number !== 'number') {
+        return "Please provide a valid number.";
+    } else {
+        let result = number * number * number;
+        return result;
+    }
+}
+
+function matchFinder(string1, string2) {
+    if (typeof string1 !== 'string' || typeof string2 !== 'string') {
+        return "Both of you provided inputs should be strings.";
+    }
+
+    else if (string1.includes(string2)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function sortMaker(arr) {
+        if (typeof arr[0] !== "number" || typeof arr[1] !== "number") {
+            return "Input Should be numbers";
+        }
+        if (arr.length !==2) {
+            return "array should have two elements";
+        }  
+        if(arr[0] < 0 || arr[1] < 0 )
+        {
+            return 'Invalid Input'
+        }else if(arr[0] === arr[1] ){
+            return 'equal'
+        }else{
+            let b= arr[0];
+            if(arr[0]< arr[1]){
+                return [arr[0],arr[1]]
+            }
+            else if(arr[1]< arr[0]){
+                return [arr[1],arr[0]]
+        }        
+        };            
+        }
+
+function findAddress(obj) {
+    var result = "";
+  
+    if (obj['street'] !== undefined) {
+      result += obj['street'];
+    } else {
+      result += "__";
+    }
+  
+    result += ",";
+  
+    if (obj['house'] !== undefined) {
+      result += obj['house'];
+    } else {obj
+      result += "__";
+    }
+  
+    result += ",";
+  
+    if (obj['society'] !== undefined) {
+      result += obj['society'];
+    } else {
+      result += "__";
+    }
+  
+    return result;
+ 
+}
+
+function canPay(changeArray, totalDue) {
+    if(changeArray.length === 0){
+        return "empty array"
+    }
+    else {
+    let sum=0;
+    for( let i=0; i<changeArray.length; i++){
+        sum+= changeArray[i]        
+    }
+ return sum>= totalDue
+}}
+
+
+
+
+
